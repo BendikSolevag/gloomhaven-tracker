@@ -23,7 +23,7 @@ function getandpush() {
           description: item.text,
           slot: item.slot,
           exhaustionType: item.limit,
-          imageUrl: item.imageUrl,
+          imageUrl: "https://gloomhavendb.com" + item.imageUrl,
         };
         docs.push(doc);
       });
@@ -44,6 +44,6 @@ function getandpush() {
 getandpush();
 
 // Restart: Delete all _item docs
-//client.delete({
-//  query: `*[_type == "item"]`,
-//});
+/*client.delete({
+  query: `*[_type == "item"]`,
+});*/
