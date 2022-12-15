@@ -19,7 +19,7 @@ const CharacterListingCard = ({ character, currentUser }) => (
     <li key={character.name}>
         <Link
             href={`/character/${character._id}?user=${currentUser}`}
-            className="flex flex-nowrap w-full group border-2 border-black rounded-lg p-2"
+            className="flex flex-nowrap w-full group border-2 border-black rounded-lg p-2 group "
         >
             <figure className="w-[100px] mr-4">
                 <Image
@@ -47,7 +47,7 @@ const CharacterListingCard = ({ character, currentUser }) => (
                         <CoinsIcon classNames={"w-5 h-5 mr-1"} />
                         {character.gold}
                     </span>
-                    <span className="flex ml-auto items-center">
+                    <span className="flex ml-auto items-center transition ease-in-out group-hover:-translate-x-4  duration-300 ">
                         {character.relatedPlayer.name == currentUser &&
                             `Edit character`}
                         {character.relatedPlayer.name != currentUser &&
