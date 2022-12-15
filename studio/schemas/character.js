@@ -20,6 +20,12 @@ export default {
       type: 'number',
     },
     {
+      name: 'accuiredItems',
+      title: 'Accuired Items',
+      type: 'array',
+      of: [{type: 'reference', to: [{type: 'item'}]}],
+    },
+    {
       name: 'checkmarkPoints',
       title: 'Checkmark Points Unlocked',
       type: 'number',
