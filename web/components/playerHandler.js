@@ -37,7 +37,7 @@ export default ({ router, currentUser, setCurrentUser, players }) => {
                                     href={`${router.pathname}?user=${player.name}`}
                                     className="w-max flex items-center border-b-[1px] border-white hover:border-black"
                                 >
-                                    {player.name}{" "}
+                                    {player.name}
                                     <ArrowIcon classNames={"h-4 w-4 ml-4"} />
                                 </Link>
                             </li>

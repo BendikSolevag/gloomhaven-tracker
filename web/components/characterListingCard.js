@@ -39,7 +39,7 @@ const CharacterListingCard = ({ character, currentUser }) => (
                 </h3>
                 <span className="">{character.relatedCharacterType.name}</span>
                 <div className="text-md flex mt-2">
-                    <span className="flex items-center mr-2">
+                    <span className="flex items-center mr-4">
                         <ExpIcon classNames={"w-5 h-5 mr-1"} />
                         {character.xp}
                     </span>

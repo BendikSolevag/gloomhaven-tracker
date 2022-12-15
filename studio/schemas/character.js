@@ -32,6 +32,11 @@ export default {
       title: 'Checkmark Points Unlocked',
       type: 'number',
     },
+    {
+      name: 'description',
+      title: 'Description',
+      type: 'string',
+    },
     perkProgression,
   ],
 }
