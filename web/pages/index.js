@@ -25,6 +25,7 @@ export default function Home({ characters, players }) {
 
                     <CharacterListing
                         characters={characters}
+                        players={players}
                         currentUser={currentUser}
                     />
                 </>
