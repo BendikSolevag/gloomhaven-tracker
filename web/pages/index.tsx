@@ -2,9 +2,9 @@ import { createClient } from "next-sanity";
 
 export default function Home({ characters }) {
   return (
-    <main>
-      <h1 className="text-3xl font-bold underline">Hello World!</h1>
-      <p>{characters.length}</p>
+    <main className="max-w-wrapper mx-auto px-4">
+      <h1 className="text-4xl  font-playfair">The Gallery</h1>
+      <p className="font-karla">{characters.length}</p>
     </main>
   );
 }
