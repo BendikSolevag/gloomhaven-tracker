@@ -1,8 +1,9 @@
 const relatedCharacterType = {
   name: 'relatedCharacterType',
-  title: 'Related Character Type',
+  title: 'Character Type',
   type: 'reference',
   to: [{type: 'characterType'}],
+  validation: (Rule) => Rule.required(),
 }
 
 export default relatedCharacterType
