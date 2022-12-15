@@ -16,7 +16,13 @@ const res = fetch("http://gloomhavendb.com/api/items")
       const doc = {
         _type: "item",
         name: data.name,
-        https://www.sanity.io/docs/js-client#creating-documents
+        cost: data.price,
+        description: data.text,
+        slot: data.slot,
+        exhaustionType: data.limit,
+        imageUrl: data.imageUrl
       };
+      client.create(doc).then((res) => console.log(`Item was psuhed, doc ID: ${res._id}`));
+      await new Promise(r => setTimeout(r, 250));
     });
   });
