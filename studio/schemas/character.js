@@ -1,4 +1,5 @@
 import name from './fields/name'
+import perkProgression from './fields/perkProgression'
 import relatedCharacterType from './fields/relatedCharacterType'
 
 export default {
@@ -23,5 +24,6 @@ export default {
       title: 'Checkmark Points Unlocked',
       type: 'number',
     },
+    perkProgression,
   ],
 }
