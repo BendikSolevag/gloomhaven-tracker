@@ -24,17 +24,18 @@
 import client from "../helpers/sanityClient";
 
 export async function getServerSideProps(context) {
-  const character = await client.fetch(
-    `*[_type == "character"  && _id == "${context.params.id}"]{..., relatedCharacterType->, relatedPlayer->, perkProgressionList[]{..., perkType->}}`
-  );
-  return {
-    props: {
-      character,
-    },
-  };
+    const character = await client.fetch(
+        `*[_type == "character"  && _id == "${context.params.id}"]{..., relatedCharacterType->, relatedPlayer->, perkProgressionList[]{..., perkType->}}`
+    );
+
+    return {
+        props: {
+            character,
+        },
+    };
 }
 
 export default function Character({ character }) {
-  console.log(character);
-  return <div />;
+    console.log(character);
+    return <div />;
 }
