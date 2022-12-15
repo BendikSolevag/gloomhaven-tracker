@@ -30,7 +30,7 @@ export default function Home({ characters, players }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const characters = await client.fetch(
     `*[_type == "character"]{..., relatedCharacterType->, relatedPlayer->, perkProgressionList[]{..., perkType->}}`
   );
