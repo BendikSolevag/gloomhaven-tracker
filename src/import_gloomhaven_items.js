@@ -9,20 +9,41 @@ const client = sanityClient({
   useCdn: true, // `false` if you want to ensure fresh data
 });
 
-const res = fetch("http://gloomhavendb.com/api/items")
-  .then((res) => res.json())
-  .then((data) => {
-    data.forEach((item) => {
-      const doc = {
-        _type: "item",
-        name: data.name,
-        cost: data.price,
-        description: data.text,
-        slot: data.slot,
-        exhaustionType: data.limit,
-        imageUrl: data.imageUrl
-      };
-      client.create(doc).then((res) => console.log(`Item was psuhed, doc ID: ${res._id}`));
-      await new Promise(r => setTimeout(r, 250));
+function getandpush() {
+  const res = fetch("http://gloomhavendb.com/api/items")
+    .then((res) => res.json())
+    .then((data) => {
+      let docs = [];
+      data.forEach((item) => {
+        console.log(item);
+        const doc = {
+          _type: "item",
+          name: item.name,
+          cost: item.price,
+          description: item.text,
+          slot: item.slot,
+          exhaustionType: item.limit,
+          imageUrl: item.imageUrl,
+        };
+        docs.push(doc);
+      });
+      return docs;
+    })
+    .then((docs) => {
+      docs.forEach((doc, i) => {
+        setTimeout(() => {
+          client
+            .create(doc)
+            .then((res) => console.log("created"))
+            .catch((err) => console.error(err));
+        }, 250 * i);
+      });
     });
-  });
+}
+
+getandpush();
+
+// Restart: Delete all _item docs
+//client.delete({
+//  query: `*[_type == "item"]`,
+//});
