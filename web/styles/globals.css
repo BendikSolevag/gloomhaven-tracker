@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  @apply font-karla;
+}
+
+h1 {
+  @apply font-playfair text-4xl;
+}
+
+h2 {
+  @apply font-playfair text-3xl;
+}
+
+h3 {
+  @apply font-playfair text-2xl;
+}

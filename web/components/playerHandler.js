@@ -24,7 +24,7 @@ export default ({ router, currentUser, setCurrentUser, players }) => {
       )}
       {currentUser === "none" && (
         <>
-          <h1 className="font-playfair text-4xl mb-4">
+          <h1 className="mb-4 mt-[40vh]">
             Which player would you like to log in as?
           </h1>
           <ul className="text-lg">

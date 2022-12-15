@@ -2,6 +2,7 @@ import { createClient } from "next-sanity";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import PlayerHandler from "../components/playerHandler";
+import CharacterListing from "../components/characterListing";
 
 export default function Home({ characters, players }) {
   const router = useRouter();
@@ -16,11 +17,13 @@ export default function Home({ characters, players }) {
       />
       {currentUser !== "none" && (
         <>
-          <h1 className="text-4xl  font-playfair mb-4">The Gallery</h1>
+          <h1 className="mb-4">The Gallery</h1>
           <p className="font-karla">
             The gallery houses all the finest soldiers in the land of
             Gloomhavenland
           </p>
+
+          <CharacterListing characters={characters} />
         </>
       )}
     </main>
