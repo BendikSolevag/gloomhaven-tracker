@@ -15,7 +15,6 @@ function getandpush() {
     .then((data) => {
       let docs = [];
       data.forEach((item) => {
-        console.log(item);
         const doc = {
           _type: "item",
           name: item.name,

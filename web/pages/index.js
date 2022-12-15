@@ -23,7 +23,7 @@ export default function Home({ characters, players }) {
             Gloomhavenland
           </p>
 
-          <CharacterListing characters={characters} />
+          <CharacterListing characters={characters} currentUser={currentUser} />
         </>
       )}
     </main>
