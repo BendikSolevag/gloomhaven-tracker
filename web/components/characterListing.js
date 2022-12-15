@@ -13,7 +13,7 @@ const CharacterListing = ({ characters, players, currentUser }) => {
     return (
         <>
             {players.map((player) => (
-                <>
+                <div key={player._id}>
                     <h2 className="mt-8 mb-4">{player.name}</h2>
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-8 font-karla">
                         {characters
@@ -22,12 +22,13 @@ const CharacterListing = ({ characters, players, currentUser }) => {
                             )
                             .map((character) => (
                                 <CharacterListingCard
+                                    key={character._id}
                                     character={character}
                                     currentUser={currentUser}
                                 />
                             ))}
                     </ul>
-                </>
+                </div>
             ))}
         </>
     );

@@ -3,6 +3,7 @@ import ArrowIcon from "./icons/arrowIcon";
 import Link from "next/link";
 
 export default ({ router, currentUser, setCurrentUser, players }) => {
+    console.log(router.pathname);
     useEffect(() => {
         if (router.query.user) {
             setCurrentUser(router.query.user);
@@ -31,9 +32,9 @@ export default ({ router, currentUser, setCurrentUser, players }) => {
                     </h1>
                     <ul className="text-lg">
                         {players.map((player) => (
-                            <li>
+                            <li key={player._id}>
                                 <Link
-                                    href={`${router.pathname}/?user=${player.name}`}
+                                    href={`${router.pathname}?user=${player.name}`}
                                     className="w-max flex items-center border-b-[1px] border-white hover:border-black"
                                 >
                                     {player.name}{" "}
