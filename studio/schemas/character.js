@@ -1,12 +1,14 @@
 import name from './fields/name'
 import perkProgression from './fields/perkProgression'
 import relatedCharacterType from './fields/relatedCharacterType'
+import relatedPlayer from './fields/relatedPlayer'
 
 export default {
   name: 'character',
   type: 'document',
   title: 'Character',
   fields: [
+    relatedPlayer,
     name,
     relatedCharacterType,
     {
