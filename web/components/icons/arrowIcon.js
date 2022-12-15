@@ -1,9 +1,9 @@
 const ArrowIcon = ({ classNames }) => {
     return (
         <svg
-            className={classNames}
             viewBox="0 0 25 18"
             fill="none"
+            className={classNames}
             xmlns="http://www.w3.org/2000/svg"
         >
             <path
