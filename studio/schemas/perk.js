@@ -10,4 +10,9 @@ export default {
     {name: 'maxChecks', title: 'Maximum Checks Amount', type: 'number'},
     relatedCharacterType,
   ],
+  preview: {
+    select: {
+      media: 'relatedCharacterType.icon',
+    },
+  },
 }
