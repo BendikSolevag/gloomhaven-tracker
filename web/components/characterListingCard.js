@@ -34,9 +34,10 @@ const CharacterListingCard = ({ character, currentUser }) => (
                 />
             </figure>
             <div className="flex-grow pr-2">
-                <h3 className="border-b-[1px] border-black w-max">
-                    {character.name}
-                </h3>
+                <div className="relative w-fit">
+                    <h3 className="w-max">{character.name}</h3>
+                    <span className="absolute bottom-0 left-0 w-full h-[1px] bg-black transition-all group-hover:w-0" />
+                </div>
                 <span className="">{character.relatedCharacterType.name}</span>
                 <div className="text-md flex mt-2">
                     <span className="flex items-center mr-4">
@@ -47,13 +48,15 @@ const CharacterListingCard = ({ character, currentUser }) => (
                         <CoinsIcon classNames={"w-5 h-5 mr-1"} />
                         {character.gold}
                     </span>
-                    <span className="flex ml-auto items-center transition ease-in-out group-hover:-translate-x-4  duration-300 ">
-                        {character.relatedPlayer.name == currentUser &&
-                            `Edit character`}
-                        {character.relatedPlayer.name != currentUser &&
-                            `Read more`}
+                    <div className="flex ml-auto items-center">
+                        <span className="transition ease-in-out group-hover:-translate-x-4  duration-300">
+                            {character.relatedPlayer.name == currentUser &&
+                                `Edit character`}
+                            {character.relatedPlayer.name != currentUser &&
+                                `Read more`}
+                        </span>
                         <ArrowIcon classNames={"ml-1 h-5 w-5"} />
-                    </span>
+                    </div>
                 </div>
             </div>
         </Link>
