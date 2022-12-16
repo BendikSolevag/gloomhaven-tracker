@@ -39,4 +39,11 @@ export default {
     },
     perkProgression,
   ],
+
+  preview: {
+    select: {
+      title: 'name',
+      media: 'relatedCharacterType.icon',
+    },
+  },
 }
