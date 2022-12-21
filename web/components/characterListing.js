@@ -18,7 +18,9 @@ const CharacterListing = ({ characters, players, currentUser }) => {
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-8 font-karla">
                         {characters
                             .filter(
-                                (item) => item.relatedPlayer._id == player._id
+                                (item) =>
+                                    item.relatedPlayer &&
+                                    item.relatedPlayer._id == player._id
                             )
                             .map((character) => (
                                 <CharacterListingCard
