@@ -10,6 +10,7 @@ const CharacterListing = ({ characters, players, currentUser }) => {
         }
         return 0;
     });
+    console.log(characters);
     return (
         <>
             {players.map((player) => (
