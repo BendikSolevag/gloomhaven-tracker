@@ -98,14 +98,14 @@ export default function Home({ players, characterTypes }) {
                                     const newCharacter = {
                                         relatedPlayer: {
                                             _type: "reference",
-                                            _id: currentPlayer[0]._id,
+                                            _ref: currentPlayer[0]._id,
                                         },
                                         _id: uuidv4(),
                                         _type: "character",
                                         name: name,
                                         relatedCharacterType: {
                                             _type: "reference",
-                                            _id: selectedRelatedCharacterType[0]
+                                            _ref: selectedRelatedCharacterType[0]
                                                 ._id,
                                         },
                                         gold: 50,
