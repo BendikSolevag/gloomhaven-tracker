@@ -36,6 +36,12 @@ export async function getServerSideProps(context) {
 }
 
 export default function Character({ character }) {
-    console.log(character);
-    return <div />;
+//    console.log(character);
+    console.log(character[0].relatedPlayer.name);
+    return(
+         <h3 className="font-karla">
+            Name: {character[0].name}
+            Owner: {character[0].relatedPlayer.name}
+            Class: {character[0].relatedCharacterType.name}
+         </h3>);
 }
