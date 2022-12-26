@@ -32,11 +32,11 @@ const CharacterListingCard = ({ character, currentUser }) => (
                 <div className="text-md flex mt-2">
                     <span className="flex items-center mr-4">
                         <ExpIcon classNames={"w-5 h-5 mr-1"} />
-                        {character.xp}
+                        {character.xp || 0}
                     </span>
                     <span className="flex items-center">
                         <CoinsIcon classNames={"w-5 h-5 mr-1"} />
-                        {character.gold}
+                        {character.gold || 0}
                     </span>
                     <div className="flex ml-auto items-center">
                         <span className="transition ease-in-out group-hover:-translate-x-4  duration-300">
