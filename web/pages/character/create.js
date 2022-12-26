@@ -4,9 +4,8 @@ import { v4 as uuidv4 } from "uuid";
 import PlayerHandler from "../../components/playerHandler";
 import { urlFor, myLoader } from "../helpers/urlFor";
 import Image from "next/image";
-import ArrowIcon from "../../components/icons/arrowIcon";
-import Link from "next/link";
 import client from "../helpers/sanityClient";
+import { BackToGallery } from "../../components/backToGallery";
 
 export default function Home({ players, characterTypes }) {
     const router = useRouter();
@@ -19,18 +18,12 @@ export default function Home({ players, characterTypes }) {
                 setCurrentUser={setCurrentUser}
                 players={players}
             />
+            <BackToGallery />
+
             {currentUser !== "none" && (
                 <>
                     <h1 className="mb-4">Create New Character</h1>
-                    <Link
-                        href={`/?user=${router.query.user}`}
-                        className="mb-8 w-max flex items-center border-b-[1px] border-white hover:border-black"
-                    >
-                        <ArrowIcon
-                            classNames={"h-4 w-4 mr-2 transform rotate-180"}
-                        />{" "}
-                        Go back without saving
-                    </Link>
+
                     <div>
                         <h2 className="mt-8">Select Character Type</h2>
                         <ul className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
