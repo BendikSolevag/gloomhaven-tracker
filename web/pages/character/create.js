@@ -114,15 +114,22 @@ export default function Home({ players, characterTypes }) {
                                     };
                                     client
                                         .createIfNotExists(newCharacter)
-                                        .then(() =>
+                                        .then(() => {
                                             console.log(
                                                 "successfully created new user"
-                                            )
-                                        )
+                                            );
+                                            return client.fetch(
+                                                `*[_type == "character" && name == "${name}"]{_id}`
+                                            );
+                                        })
+                                        .then((characterId) => {
+                                            router.push(
+                                                `/character/${characterId[0]._id}?user=${router.query.user}`
+                                            );
+                                        })
                                         .catch((err) =>
                                             console.error(`err: ${err}`)
                                         );
-                                    //router.push(`/?user=${router.query.user}`);
                                 }}
                                 className="border-2 border-black rounded-lg text-xl p-2 hover:bg-blue-100"
                             >
