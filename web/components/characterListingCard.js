@@ -9,7 +9,7 @@ const CharacterListingCard = ({ character, currentUser }) => (
     <li key={character.name}>
         <Link
             href={`/character/${character._id}?user=${currentUser}`}
-            className="flex flex-nowrap w-full group border-2 border-black rounded-lg p-2 group "
+            className="flex flex-nowrap w-full group border-2 border-black rounded-lg p-2"
         >
             <figure className="w-[100px] mr-4">
                 <Image
