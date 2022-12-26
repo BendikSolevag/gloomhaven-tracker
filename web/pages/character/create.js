@@ -109,6 +109,8 @@ export default function Home({ players, characterTypes }) {
                                                 ._id,
                                         },
                                         gold: 50,
+                                        xp: 0,
+                                        checkmarkPoints: 0,
                                     };
                                     client
                                         .createIfNotExists(newCharacter)
