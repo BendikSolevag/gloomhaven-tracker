@@ -1,25 +1,15 @@
-import imageUrlBuilder from "@sanity/image-url";
-import client from "../pages/helpers/sanityClient";
 import Link from "next/link";
 import Image from "next/image";
 import ExpIcon from "./icons/expIcon";
 import CoinsIcon from "./icons/coinsIcon";
 import ArrowIcon from "./icons/arrowIcon";
-
-const myLoader = ({ src, width, quality }) => {
-    return `${src}`;
-};
-
-const builder = imageUrlBuilder(client);
-function urlFor(source) {
-    return builder.image(source);
-}
+import { urlFor, myLoader } from "../pages/helpers/urlFor";
 
 const CharacterListingCard = ({ character, currentUser }) => (
     <li key={character.name}>
         <Link
             href={`/character/${character._id}?user=${currentUser}`}
-            className="flex flex-nowrap w-full group border-2 border-black rounded-lg p-2 group "
+            className="flex flex-nowrap w-full group border-2 border-black rounded-lg p-2"
         >
             <figure className="w-[100px] mr-4">
                 <Image
