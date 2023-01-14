@@ -4,6 +4,8 @@ import { useState } from "react";
 import PlayerHandler from "../../components/playerHandler";
 import BackToGallery from "../../components/backToGallery";
 import CheckmarkPoints from "../../components/character/checkmarkPoints";
+import ExpCounter from "../../components/character/expCounter";
+import GoldCounter from "../../components/character/goldCounter";
 
 export default function Character({ character, players }) {
     const router = useRouter();
@@ -11,7 +13,13 @@ export default function Character({ character, players }) {
     const [currentCheckmarkPoints, setCurrentCheckmarkPoints] = useState(
         character[0].checkmarkPoints || 0
     );
-    console.log(currentCheckmarkPoints);
+    const [currentExp, setCurrentExp] = useState(
+        character[0].xp || 0
+    );
+    const [currentGold, setCurrentGold] = useState(
+        character[0].gold || 0
+    );
+    console.log(character[0]);
     return (
         <main className="max-w-wrapper mx-auto px-4">
             <PlayerHandler
@@ -27,6 +35,16 @@ export default function Character({ character, players }) {
                 Owner: {character[0].relatedPlayer.name}
             </span>
             <span> Type: {character[0].relatedCharacterType.name}</span>
+
+            <ExpCounter 
+                currentExp={currentExp}
+                setCurrentExp={setCurrentExp}
+            />
+
+            <GoldCounter 
+                currentGold={currentGold}
+                setCurrentGold={setCurrentGold}
+            />
 
             <CheckmarkPoints
                 currentCheckmarkPoints={currentCheckmarkPoints}
