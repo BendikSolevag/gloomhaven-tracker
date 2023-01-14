@@ -30,6 +30,8 @@ const CheckmarkPoints = ({
                     >
                         <MinusIcon className={"w-4 h-4 mx-2"} />
                     </button>
+
+                    <h3 className="text-2xl ml-auto mr-1">{currentCheckmarkPoints}</h3>
                 </div>
                 <ul>
                     <div className="flex items-center">
@@ -38,7 +40,7 @@ const CheckmarkPoints = ({
                             <li
                                 className={`${
                                     i <= currentCheckmarkPoints
-                                        ? ""
+                                        ? "bg-blue-100"
                                         : "text-white"
                                 } border-2 border-black mx-1 px-2`}
                             >
@@ -51,7 +53,7 @@ const CheckmarkPoints = ({
                             <li
                                 className={`${
                                     i <= currentCheckmarkPoints
-                                        ? ""
+                                        ? "bg-blue-100"
                                         : "text-white"
                                 } border-2 border-black mx-1 px-2`}
                             >
@@ -64,7 +66,7 @@ const CheckmarkPoints = ({
                             <li
                                 className={`${
                                     i <= currentCheckmarkPoints
-                                        ? ""
+                                        ? "bg-blue-100"
                                         : "text-white"
                                 } border-2 border-black mx-1 px-2`}
                             >
@@ -78,7 +80,7 @@ const CheckmarkPoints = ({
                             <li
                                 className={`${
                                     i <= currentCheckmarkPoints
-                                        ? ""
+                                        ? "bg-blue-100"
                                         : "text-white"
                                 } border-2 border-black mx-1 px-2`}
                             >
@@ -90,7 +92,7 @@ const CheckmarkPoints = ({
                             <li
                                 className={`${
                                     i <= currentCheckmarkPoints
-                                        ? ""
+                                        ? "bg-blue-100"
                                         : "text-white"
                                 } border-2 border-black mx-1 px-2`}
                             >
@@ -103,7 +105,7 @@ const CheckmarkPoints = ({
                             <li
                                 className={`${
                                     i <= currentCheckmarkPoints
-                                        ? ""
+                                        ? "bg-blue-100"
                                         : "text-white"
                                 } border-2 border-black mx-1 px-2`}
                             >
