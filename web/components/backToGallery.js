@@ -7,10 +7,12 @@ export const BackToGallery = () => {
     return (
         <Link
             href={`/?user=${router.query.user}`}
-            className="mb-8 w-max flex items-center border-b-[1px] border-white hover:border-black"
+            className="mb-4 w-max flex items-center border-b-[1px] border-white hover:border-black"
         >
             <ArrowIcon classNames={"h-4 w-4 mr-4 transform rotate-180"} /> Back
             to the gallery
         </Link>
     );
 };
+
+export default BackToGallery;

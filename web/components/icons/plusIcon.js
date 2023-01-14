@@ -1,7 +1,7 @@
-const PlusIcon = ({ classNames }) => {
+const PlusIcon = ({ className }) => {
     return (
         <svg
-            className={classNames}
+            className={className}
             fill="currentColor"
             viewBox="0 0 45.402 45.402"
         >

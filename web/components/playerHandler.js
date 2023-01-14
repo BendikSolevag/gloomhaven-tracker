@@ -13,7 +13,7 @@ export default ({ router, currentUser, setCurrentUser, players }) => {
     });
 
     return (
-        <div className="my-4 font-karla">
+        <div className="mt-4 mb-1 font-karla">
             {currentUser != "none" && (
                 <Link
                     href={router.pathname}

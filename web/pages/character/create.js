@@ -5,7 +5,7 @@ import PlayerHandler from "../../components/playerHandler";
 import { urlFor, myLoader } from "../helpers/urlFor";
 import Image from "next/image";
 import client from "../helpers/sanityClient";
-import { BackToGallery } from "../../components/backToGallery";
+import BackToGallery from "../../components/backToGallery";
 
 export default function Home({ players, characterTypes }) {
     const router = useRouter();
