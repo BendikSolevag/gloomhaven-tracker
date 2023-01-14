@@ -1,4 +1,4 @@
-const CheckmarkIcon = (className) => (
+const CheckmarkIcon = ({className}) => (
     <svg viewBox="0 0 17.837 17.837" className={className}>
         <path
             d="M16.145,2.571c-0.272-0.273-0.718-0.273-0.99,0L6.92,10.804l-4.241-4.27
