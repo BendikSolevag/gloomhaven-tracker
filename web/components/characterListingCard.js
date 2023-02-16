@@ -43,7 +43,7 @@ const CharacterListingCard = ({ character, currentUser }) => (
                             {character.relatedPlayer.name == currentUser &&
                                 `Edit character`}
                             {character.relatedPlayer.name != currentUser &&
-                                `Read more`}
+                                `View character`}
                         </span>
                         <ArrowIcon classNames={"ml-1 h-5 w-5"} />
                     </div>
