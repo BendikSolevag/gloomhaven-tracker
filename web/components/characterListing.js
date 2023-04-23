@@ -41,13 +41,14 @@ const CharacterListing = ({ characters, players, currentUser }) => {
                                     <div className="flex items-center">
                                         {" "}
                                         <PlusIcon
-                                            classNames={
+                                            className={
                                                 "w-[20px] h-[20px] mx-2 mt-[3px] transition-all group-hover:rotate-90"
                                             }
                                         />
                                         <div className="relative w-max">
                                             <h3>Create character</h3>
-                                            <span className="absolute bottom-0 left-0 w-full h-[1px] bg-black transition-all group-hover:w-0" />
+                                            <span /* This is the underline */ 
+                                                className="absolute bottom-0 left-0 w-full h-[1px] bg-black transition-all group-hover:w-0" />
                                         </div>
                                     </div>
                                 </div>
