@@ -3,7 +3,7 @@ import Image from "next/image";
 import ExpIcon from "./icons/expIcon";
 import CoinsIcon from "./icons/coinsIcon";
 import ArrowIcon from "./icons/arrowIcon";
-import { urlFor, myLoader } from "../pages/helpers/urlFor";
+import { urlFor, myLoader } from "../helpers/urlFor";
 
 const CharacterListingCard = ({ character, currentUser }) => (
     <li key={character.name}>

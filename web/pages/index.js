@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import PlayerHandler from "../components/playerHandler";
 import CharacterListing from "../components/characterListing";
-import client from "./helpers/sanityClient";
+import client from "../helpers/sanityClient";
 
 export default function Home({ characters, players }) {
     const router = useRouter();

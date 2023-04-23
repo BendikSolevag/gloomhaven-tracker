@@ -2,9 +2,10 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import PlayerHandler from "../../components/playerHandler";
-import { urlFor, myLoader } from "../helpers/urlFor";
+
+import { urlFor, myLoader } from "../../helpers/urlFor"
 import Image from "next/image";
-import client from "../helpers/sanityClient";
+import client from "../../helpers/sanityClient";
 import BackToGallery from "../../components/backToGallery";
 
 export default function Home({ players, characterTypes }) {

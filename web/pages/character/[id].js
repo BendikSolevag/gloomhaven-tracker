@@ -1,4 +1,4 @@
-import client from "../helpers/sanityClient";
+import client from "../../helpers/sanityClient";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import PlayerHandler from "../../components/playerHandler";
